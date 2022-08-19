@@ -34,7 +34,7 @@ fn main() {
     let mut delta_s: f64 = 0.0;
 
     while distance_from_sun > 0.0 {
-        acceleration = functions::calculate_acceleration(GRAVITATIONAL_CONSTANT, MASS_OF_SUN_KG, distance_from_sun);
+        acceleration = -1.0 * (GRAVITATIONAL_CONSTANT * MASS_OF_SUN_KG) / (distance_from_sun * distance_from_sun);
         delta_v = acceleration * delta_t;
         velocity += delta_v;
         delta_s = velocity * delta_t;
