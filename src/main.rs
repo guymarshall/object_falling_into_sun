@@ -24,15 +24,17 @@ fn main() {
     const GRAVITATIONAL_CONSTANT: f64 = 0.000000000066743;
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
     const DISTANCE_BETWEEN_EARTH_AND_SUN_M: f64 = 151480000000.0;
-}
 
-// int deltaT = 1;
-// int time = 0;
-// double distanceFromSun = DISTANCE_BETWEEN_EARTH_AND_SUN_M;
-// double acceleration = 0.0;
-// double velocity = 0.0;
-// double deltaV = 0.0;
-// double deltaS = 0.0;
+    let delta_t: i32 = 1;
+    let mut time: i32 = 0;
+    let mut distance_from_sun: f64 = DISTANCE_BETWEEN_EARTH_AND_SUN_M;
+    let mut acceleration: f64 = 0.0;
+    let mut velocity: f64 = 0.0;
+    let mut deltaV: f64 = 0.0;
+    let mut deltaS: f64 = 0.0;
+
+    //while
+}
 
 // while (distanceFromSun > 0) {
 //     acceleration = Functions.calculateAcceleration(GRAVITATIONAL_CONSTANT, MASS_OF_SUN_KG, distanceFromSun);
