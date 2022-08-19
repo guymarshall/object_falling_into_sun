@@ -26,10 +26,10 @@ fn main() {
     let delta_t: f64 = 1.0;
     let mut time: f64 = 0.0;
     let mut distance_from_sun: f64 = DISTANCE_BETWEEN_EARTH_AND_SUN_M;
-    let mut acceleration: f64 = 0.0;
+    let mut acceleration: f64;
     let mut velocity: f64 = 0.0;
-    let mut delta_v: f64 = 0.0;
-    let mut delta_s: f64 = 0.0;
+    let mut delta_v: f64;
+    let mut delta_s: f64;
 
     while distance_from_sun > 0.0 {
         acceleration = -1.0 * (GRAVITATIONAL_CONSTANT * MASS_OF_SUN_KG) / (distance_from_sun * distance_from_sun);
