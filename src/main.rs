@@ -25,25 +25,23 @@ fn main() {
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
     const DISTANCE_BETWEEN_EARTH_AND_SUN_M: f64 = 151480000000.0;
 
-    let delta_t: i32 = 1;
-    let mut time: i32 = 0;
+    let delta_t: f64 = 1.0;
+    let mut time: f64 = 0.0;
     let mut distance_from_sun: f64 = DISTANCE_BETWEEN_EARTH_AND_SUN_M;
     let mut acceleration: f64 = 0.0;
     let mut velocity: f64 = 0.0;
-    let mut deltaV: f64 = 0.0;
-    let mut deltaS: f64 = 0.0;
+    let mut delta_v: f64 = 0.0;
+    let mut delta_s: f64 = 0.0;
 
-    //while
+    while distance_from_sun > 0.0 {
+        acceleration = functions::calculate_acceleration(GRAVITATIONAL_CONSTANT, MASS_OF_SUN_KG, distance_from_sun);
+        delta_v = acceleration * delta_t;
+        velocity += delta_v;
+        delta_s = velocity * delta_t;
+        distance_from_sun += delta_s;
+
+        println!("Time: {}s, acceleration: {}ms^-2, velocity: {}ms^-1, distance: {}m", time, acceleration, velocity, distance_from_sun);
+
+        time += delta_t;
+    }
 }
-
-// while (distanceFromSun > 0) {
-//     acceleration = Functions.calculateAcceleration(GRAVITATIONAL_CONSTANT, MASS_OF_SUN_KG, distanceFromSun);
-//     deltaV = acceleration * deltaT;
-//     velocity += deltaV;
-//     deltaS = velocity * deltaT;
-//     distanceFromSun += deltaS;
-
-//     System.out.printf("Time: %ds, acceleration: %fms^-2, velocity: %fms^-1, distance: %fm%n", time, acceleration, velocity, distanceFromSun);
-
-//     time += deltaT;
-// }
