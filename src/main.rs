@@ -18,8 +18,6 @@ The new displacement, s = s-old + delta-s .
 And similar to work out the new v.
 */
 
-mod functions;
-
 fn main() {
     const GRAVITATIONAL_CONSTANT: f64 = 0.000000000066743;
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
