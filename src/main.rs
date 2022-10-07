@@ -12,21 +12,21 @@ fn main() {
     println!("8 - Neptune");
     println!("9 - Pluto");
 
-    let choice: i8 = user_input::get_user_input("Choice");
+    let choice: f64 = user_input::get_user_input("Choice");
 
     let radius: f64 = match choice {
-        1 => 69550000000.0,
-        2 => 107550000000.0,
-        3 => 151480000000.0,
-        4 => 211620000000.0,
-        5 => 741850000000.0,
-        6 => 1474100000000.0,
-        7 => 2944700000000.0,
-        8 => 4474000000000.0,
-        9 => 5900000000000.0,
+        1.0 => 69550000000.0,
+        2.0 => 107550000000.0,
+        3.0 => 151480000000.0,
+        4.0 => 211620000000.0,
+        5.0 => 741850000000.0,
+        6.0 => 1474100000000.0,
+        7.0 => 2944700000000.0,
+        8.0 => 4474000000000.0,
+        9.0 => 5900000000000.0,
         _ => 0.0
     };
-    let update_every: i8 = user_input::get_user_input("After how many seconds do you want to update?");
+    let update_every: f64 = user_input::get_user_input("After how many seconds do you want to update?");
 
     const GRAVITATIONAL_CONSTANT: f64 = 0.000000000066743;
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
