@@ -1,4 +1,18 @@
+mod user_input;
+
 fn main() {
+    println!("Choose your object!");
+    println!("1 - Mercury");
+    println!("2 - Venus");
+    println!("3 - Earth");
+    println!("4 - Mars");
+    println!("5 - Jupiter");
+    println!("6 - Saturn");
+    println!("7 - Uranus");
+    println!("8 - Neptune");
+    println!("9 - Pluto");
+    let choice: i8 = user_input::get_user_input("Choice");
+
     const GRAVITATIONAL_CONSTANT: f64 = 0.000000000066743;
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
     const DISTANCE_BETWEEN_EARTH_AND_SUN_M: f64 = 151480000000.0;
