@@ -30,7 +30,6 @@ fn main() {
 
     const GRAVITATIONAL_CONSTANT: f64 = 0.000000000066743;
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
-    // const DISTANCE_BETWEEN_EARTH_AND_SUN_M: f64 = 151480000000.0;
 
     let delta_t: f64 = 1.0;
     let mut time: f64 = 0.0;
