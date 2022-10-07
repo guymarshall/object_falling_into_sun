@@ -13,15 +13,28 @@ fn main() {
     println!("9 - Pluto");
 
     let choice: i8 = user_input::get_user_input("Choice");
+
+    let radius: f64 = match choice {
+        1 => 69550000000.0,
+        2 => 107550000000.0,
+        3 => 151480000000.0,
+        4 => 211620000000.0,
+        5 => 741850000000.0,
+        6 => 1474100000000.0,
+        7 => 2944700000000.0,
+        8 => 4474000000000.0,
+        9 => 5900000000000.0,
+        _ => 0.0
+    };
     let update_every: i8 = user_input::get_user_input("After how many seconds do you want to update?");
 
     const GRAVITATIONAL_CONSTANT: f64 = 0.000000000066743;
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
-    const DISTANCE_BETWEEN_EARTH_AND_SUN_M: f64 = 151480000000.0;
+    // const DISTANCE_BETWEEN_EARTH_AND_SUN_M: f64 = 151480000000.0;
 
     let delta_t: f64 = 1.0;
     let mut time: f64 = 0.0;
-    let mut distance_from_sun: f64 = DISTANCE_BETWEEN_EARTH_AND_SUN_M;
+    let mut distance_from_sun: f64 = radius;
     let mut acceleration: f64;
     let mut velocity: f64 = 0.0;
     let mut delta_v: f64;
