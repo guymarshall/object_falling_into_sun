@@ -12,7 +12,7 @@ fn main() {
     println!("8 - Neptune");
     println!("9 - Pluto");
 
-    let choice: i8 = user_input::get_user_input("Choice");
+    let choice: i32 = user_input::get_user_input("Choice");
 
     let radius: f64 = match choice {
         1 => 69550000000.0,
@@ -26,7 +26,7 @@ fn main() {
         9 => 5900000000000.0,
         _ => 0.0
     };
-    let update_every: i8 = user_input::get_user_input("After how many seconds do you want to update?");
+    let update_every: i32 = user_input::get_user_input("After how many seconds do you want to update?");
 
     const GRAVITATIONAL_CONSTANT: f64 = 0.000000000066743;
     const MASS_OF_SUN_KG: f64 = 1988470000000000000000000000000.0;
@@ -46,7 +46,7 @@ fn main() {
         delta_s = velocity * delta_t;
         distance_from_sun += delta_s;
 
-        if time as i8 % update_every == 0 {
+        if time as i32 % update_every == 0 {
             println!("Time: {}s, acceleration: {}ms^-2, velocity: {}ms^-1, distance: {}m", time, acceleration, velocity, distance_from_sun);
         }
 
