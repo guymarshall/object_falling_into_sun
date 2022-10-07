@@ -47,7 +47,9 @@ fn main() {
         delta_s = velocity * delta_t;
         distance_from_sun += delta_s;
 
-        println!("Time: {}s, acceleration: {}ms^-2, velocity: {}ms^-1, distance: {}m", time, acceleration, velocity, distance_from_sun);
+        if time % update_every == 0.0 {
+            println!("Time: {}s, acceleration: {}ms^-2, velocity: {}ms^-1, distance: {}m", time, acceleration, velocity, distance_from_sun);
+        }
 
         time += delta_t;
     }
