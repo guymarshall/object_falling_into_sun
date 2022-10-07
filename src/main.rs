@@ -11,6 +11,7 @@ fn main() {
     println!("7 - Uranus");
     println!("8 - Neptune");
     println!("9 - Pluto");
+    println!("10 - Proxima Centauri b");
 
     let choice: i32 = user_input::get_user_input("Choice");
 
@@ -24,6 +25,7 @@ fn main() {
         7 => 2944700000000.0,
         8 => 4474000000000.0,
         9 => 5900000000000.0,
+        10 => 39924000000000000.0,
         _ => 0.0
     };
     let update_every: i32 = user_input::get_user_input("After how many seconds do you want to update?");
